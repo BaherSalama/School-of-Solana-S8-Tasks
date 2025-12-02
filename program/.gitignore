@@ -1,0 +1,10 @@
+.next
+anchor/.anchor
+anchor/node_modules
+anchor/target/types
+anchor/target/release
+anchor/target/sbpf-solana-solana
+anchor/target/deploy
+anchor/target/debug
+anchor/target/.rustc_info.json
+node_modules

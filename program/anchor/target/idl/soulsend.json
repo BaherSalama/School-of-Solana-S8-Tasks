@@ -1,0 +1,127 @@
+{
+  "address": "7gLZpemQseJZJWo5tcSWVCL4g1Y6GN1xmdiptkQUo2rZ",
+  "metadata": {
+    "name": "soulsend",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "delete_soul",
+      "discriminator": [
+        250,
+        27,
+        88,
+        157,
+        73,
+        114,
+        233,
+        250
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "soul",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "soul",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "content",
+          "type": "string"
+        },
+        {
+          "name": "heading",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Soul",
+      "discriminator": [
+        221,
+        123,
+        227,
+        167,
+        201,
+        28,
+        164,
+        251
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Blogtoobig",
+      "msg": "No more than 1Mb"
+    },
+    {
+      "code": 6001,
+      "name": "Headingtoobig",
+      "msg": "Smaller Heading plz"
+    }
+  ],
+  "types": [
+    {
+      "name": "Soul",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "heading",
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
